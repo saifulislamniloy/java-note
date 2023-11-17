@@ -10,7 +10,7 @@
 ## allMatch
 #### Possible Output: true/false
 
-Output - true
+Output - false
 ```
 List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9 ,10);
 
@@ -19,7 +19,7 @@ Predicate<Integer> isNumberEven = number -> number % 2 == 0;
 boolean result = numbers.stream().allMatch(isNumberEven); /* result = false */
 ```
 
-Output - false
+Output - true
 ```
 List<Integer> numbers = Arrays.asList(2, 4, 6, 8, 10);
 
