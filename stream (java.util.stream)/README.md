@@ -4,6 +4,7 @@
 ### Table of Content
 - [anyMatch](#anymatch)
 - [allMatch](#allmatch)
+- [noneMatch](#nonematch)
 
 
 
