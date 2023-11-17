@@ -6,6 +6,7 @@
 - [allMatch](#allmatch)
 - [noneMatch](#nonematch)
 - [findAny](#findAny)
+- [findFirst](#findFirst)
 
 
 
