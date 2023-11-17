@@ -5,6 +5,7 @@
 - [anyMatch](#anymatch)
 - [allMatch](#allmatch)
 - [noneMatch](#nonematch)
+- [findAny](#findAny)
 
 
 
@@ -72,4 +73,52 @@ List<Integer> numbers = Arrays.asList(1, 3, 5, 7, 9, 10);
 Predicate<Integer> isNumberEven = number -> number % 2 == 0;
 
 boolean result = numbers.stream().noneMatch(isNumberEven); /* result = false */
+```
+
+
+
+## findAny
+#### Possible Output: (with value/empty) optional
+
+Output - with value optional
+``` java
+List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+Predicate<Integer> isNumberEven = number -> number % 2 == 0;
+
+Optional<Integer> result = numbers.stream().filter(isNumberEven).findAny(); /* result = value (2 or any even) */
+
+```
+
+Output - empty optional
+``` java
+List<Integer> numbers = Arrays.asList(1, 3, 5, 7, 9);
+
+Predicate<Integer> isNumberEven = number -> number % 2 == 0;
+
+Optional<Integer> result = numbers.stream().filter(isNumberEven).findAny(); /* result = empty */
+```
+
+
+
+## findFirst
+#### Possible Output: (with value/empty) optional
+
+Output - with value optional
+``` java
+List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+Predicate<Integer> isNumberEven = number -> number % 2 == 0;
+
+Optional<Integer> result = numbers.stream().filter(isNumberEven).findFirst(); /* result = value (2) */
+
+```
+
+Output - empty optional
+``` java
+List<Integer> numbers = Arrays.asList(1, 3, 5, 7, 9);
+
+Predicate<Integer> isNumberEven = number -> number % 2 == 0;
+
+Optional<Integer> result = numbers.stream().filter(isNumberEven).findFirst(); /* result = empty */
 ```
