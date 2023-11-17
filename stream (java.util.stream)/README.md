@@ -49,3 +49,26 @@ Predicate<Integer> isNumberEven = number -> number % 2 == 0;
 
 boolean result = numbers.stream().allMatch(isNumberEven); /* result = true */
 ```
+
+
+
+## noneMatch
+#### Possible Output: true/false
+
+Output - true
+``` java
+List<Integer> numbers = Arrays.asList(1, 3, 5, 7, 9);
+
+Predicate<Integer> isNumberEven = number -> number % 2 == 0;
+
+boolean result = numbers.stream().noneMatch(isNumberEven); /* result = true */
+```
+
+Output - false
+``` java
+List<Integer> numbers = Arrays.asList(1, 3, 5, 7, 9, 10);
+
+Predicate<Integer> isNumberEven = number -> number % 2 == 0;
+
+boolean result = numbers.stream().noneMatch(isNumberEven); /* result = false */
+```
